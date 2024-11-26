@@ -121,6 +121,7 @@ const removeLetter = () => {
     state.currentCol--
 }
 
+
 const startUp = () => {
     const game = document.getElementById('game')
     drawGrid(game)
