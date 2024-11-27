@@ -1,4 +1,5 @@
-const dictionary = ['earth' ,'plane']
+import { dictionary } from './dictionary.js';
+
 const state = {
     secret: dictionary[Math.floor(Math.random()* dictionary.length)],
     grid: Array(6)
@@ -40,6 +41,35 @@ const drawGrid = (container) => {
 
     container.appendChild(grid)
 }
+
+const registerButtonEvents = () => {
+    const buttons = document.querySelectorAll(".keyboard button");
+
+    buttons.forEach((button) => {
+        button.onclick = () => {
+            const key = button.textContent;
+
+            if (key === "ENTER") {
+                if (state.currentCol === 5) {
+                    const word = getCurrentWord();
+                    if (isWordValid(word)) {
+                        revealWord(word);
+                        state.currentRow++;
+                        state.currentCol = 0;
+                    } else {
+                        alert("Word not in List.");
+                    }
+                }
+            } else if (key === "DEL") {
+                removeLetter();
+            } else if (isLetter(key)) {
+                addLetter(key);
+            }
+
+            updateGrid();
+        };
+    });
+};
 
 const registerKeyboardevEvents = () => {
     document.body.onkeydown = (e) => {
@@ -127,6 +157,7 @@ const startUp = () => {
     drawGrid(game)
 
     registerKeyboardevEvents()
+    registerButtonEvents()
 
     console.log(state.secret)
 }
