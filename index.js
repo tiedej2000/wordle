@@ -1,6 +1,6 @@
-const dictionary = ['balls','earth','plane']
+const dictionary = ['earth' ,'plane']
 const state = {
-    secret: dictionary[0],
+    secret: dictionary[Math.floor(Math.random()* dictionary.length)],
     grid: Array(6)
         .fill()
         .map(()=> Array(5).fill('')),
