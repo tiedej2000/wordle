@@ -116,6 +116,7 @@ button:hover{
         width: 6vw;
         height: 7vh;
         font-size: 2vh;
+        text-align: center;
     }
 
     button.enter,
@@ -123,5 +124,9 @@ button:hover{
         width: 10vw;
         font-size: 1vh;
         position: relative;
+    }
+
+    button:hover{
+        background-color: var(--empty);
     }
 }
