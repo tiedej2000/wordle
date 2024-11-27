@@ -61,7 +61,7 @@ html,body{
     top: -100px;
 }
 
-button{
+.keyboard button{
     width: 45px;
     height: 60px;
     background: #818384;
@@ -93,3 +93,35 @@ button:hover{
     background-color: #3a3a3c;
 }
 
+/* Media Query for Small Screens */
+@media (max-width: 600px) {
+    #game {
+        height: 40vh; /* Compact height for smaller screens */
+        margin-top: 10vh;
+    }
+
+    .box {
+        width: 10vw;
+        height: 10vw;
+        font-size: 3vh;
+    }
+
+    .keyboard {
+        width: 100%;
+        position: relative;
+        top: 12vh;
+    }
+
+    .keyboard button {
+        width: 6vw;
+        height: 7vh;
+        font-size: 2vh;
+    }
+
+    button.enter,
+    button.del {
+        width: 10vw;
+        font-size: 1vh;
+        position: relative;
+    }
+}
