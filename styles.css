@@ -127,6 +127,6 @@ button:hover{
     }
 
     button:hover{
-        background-color: var(--empty);
+        background-color: #818384;
     }
 }
