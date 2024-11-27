@@ -104,6 +104,7 @@ html, body {
     align-items: center; 
     justify-content: center; 
     text-transform: uppercase;
+    touch-action: manipulation;
 }
 
 button.enter {
@@ -156,6 +157,7 @@ button:hover {
         align-items: center; 
         justify-content: center; 
         text-transform: uppercase;
+        touch-action: manipulation;
     }
 
     button.enter,
