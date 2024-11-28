@@ -9,10 +9,11 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
     font-size: 20px;
     color: white;
     text-transform: uppercase;
+    position: relative;
+    top: 60px;
 }
 
 .patch{
@@ -22,6 +23,8 @@ html, body {
     font-size: 1vh;
     display: flex;
     justify-content: center;
+    position: relative;
+    top: -100px;
 }
 
 :root {
@@ -36,6 +39,8 @@ html, body {
     place-items: center;
     width: 100%;
     height: 600px;
+    position: relative;
+    top: -40px;
 }
 
 .grid {
@@ -79,7 +84,7 @@ html, body {
     align-items: center;
     gap: 8px;
     position: relative;
-    top: -100px;
+    top: -120px;
 }
 
 .keyboard .top-row,
@@ -138,15 +143,26 @@ button:hover {
         font-size: 3vh;
     }
 
+    .patch{
+        position: relative;
+        top: -20px;
+    }
+
+    .header{
+        margin-top: 80px;
+        position: relative;
+        top: -20px;
+    }
+
     .keyboard {
         width: 100%;
         position: relative;
-        top: 3vh;
+        top: -4vh;
     }
 
     .keyboard .top-row,
     .keyboard .mid-row {
-        flex-direction: row; /* Ensure buttons stay in a row */
+        flex-direction: row; 
     }
 
     .keyboard button {

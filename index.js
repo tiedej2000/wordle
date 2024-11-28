@@ -1,7 +1,7 @@
 import { dictionary } from './dictionary.js';
 
 const state = {
-    secret: dictionary[0], //dictionary[Math.floor(Math.random()* dictionary.length)],
+    secret: dictionary[722], //dictionary[Math.floor(Math.random()* dictionary.length)],
     grid: Array(6)
         .fill()
         .map(()=> Array(5).fill('')),
