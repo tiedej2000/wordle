@@ -1,0 +1,220 @@
+.modal{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: "NYTKarnakCondensed"; 
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#modal-lose{
+    display: none;
+}
+
+#modal-win{
+    display: none;
+}
+
+.modal-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--default);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 550px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-header{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--empty);
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.modal-subtext{
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.modal-word{
+    text-transform: uppercase;
+    padding: 20px 60px;
+    background-color: var(--empty);
+    border-radius: 8px;
+    font-size: 42px;
+    border: 3px dashed var(--right);
+    margin-bottom: 80px;
+}
+
+.modal-time{
+    text-transform: uppercase;
+    padding: 20px 60px;
+    background-color: var(--empty);
+    border-radius: 8px;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.modal-share{
+    border-style: none;
+    border-radius: 4px;
+    font-family: "Helvetica", sans-serif;
+    font-weight: 600;
+    background-color: var(--right);
+    color: white;
+    padding: 8px 15px;
+}
+
+.modal-share img{
+    filter: invert(1) brightness(100%) saturate(100%);
+}
+
+.modal-share:hover{
+    background-color: var(--right);
+    cursor: pointer;
+}
+
+
+
+/*-------------------------lose modal-----------------------*/
+
+.modal-lose{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: "NYTKarnakCondensed"; 
+}
+
+.modal-content-lose{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--default);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 550px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-header-lose{
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--empty);
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.modal-subtext-lose{
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.modal-word-lose{
+    text-transform: uppercase;
+    padding: 20px 60px;
+    background-color: var(--empty);
+    border-radius: 8px;
+    font-size: 42px;
+    border: 3px dashed var(--right);
+    margin-bottom: 80px;
+}
+
+.modal-time-lose{
+    text-transform: uppercase;
+    padding: 20px 60px;
+    background-color: var(--empty);
+    border-radius: 8px;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.modal-share-lose{
+    border-style: none;
+    border-radius: 4px;
+    font-family: "Helvetica", sans-serif;
+    font-weight: 600;
+    background-color: var(--right);
+    color: white;
+    padding: 8px 15px;
+}
+
+.modal-share-lose img{
+    filter: invert(1) brightness(100%) saturate(100%);
+}
+
+.modal-share-lose:hover{
+    background-color: var(--right);
+    cursor: pointer;
+}
+
+
+@media (max-width: 600px) {
+    .modal-content, .modal-content-lose {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .modal-header, .modal-header-lose {
+        font-size: 24px;
+    }
+
+    .modal-subtext, .modal-subtext-lose {
+        font-size: 18px;
+    }
+
+    .modal-word, .modal-word-lose {
+        font-size: 32px;
+        padding: 15px 30px;
+    }
+
+    .modal-time, .modal-time-lose {
+        font-size: 32px;
+        padding: 15px 30px;
+    }
+
+    .modal-share, .modal-share-lose {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .close-button {
+        font-size: 16px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .modal, .modal-lose {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}

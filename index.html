@@ -5,10 +5,37 @@
     <title>Wordle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal.css">
+    <link href="https://db.onlinewebfonts.com/c/4789cf828c01b22acb9b2b73ee91aa0d?family=NYTKarnakCondensed" rel="stylesheet"> 
+
 </head>
 <body>
-    <div class="header">wordle :-)</div>
-    <div id="game"></div>
+    <div class="header">wordle</div>
+    <div id="game">
+        <div class="modal" id="modal-win">
+            <div class="modal-content">
+                <span class="close-button" id="closeModal">&times;</span>
+                <div class="modal-header">Congratulations! <br> You won!</div>
+                <div class="modal-subtext"> The word was: </div>
+                <div class="modal-word"></div>
+                <div class="modal-subtext">Your time for guessing the word:</div>
+                <div class="modal-time"></div>
+                <button class="modal-share">SHARE <img src="./media/share-boxed.svg" alt=""></button>
+            </div>
+        </div>
+
+        <div class="modal-lose"id="modal-lose">
+            <div class="modal-content-lose">
+                <span class="close-button" id="closeModal-lose">&times;</span>
+                <div class="modal-header-lose">Unfortunately, <br> you lost!</div>
+                <div class="modal-subtext-lose"> The word was: </div>
+                <div class="modal-word-lose"></div>
+                <div class="modal-subtext-lose">Your time for guessing the word:</div>
+                <div class="modal-time-lose"></div>
+                <button class="modal-share-lose">SHARE <img src="./media/share-boxed.svg" alt=""></button>
+            </div>
+        </div>
+    </div>
     <div class="keyboard">
         <div class="top-row">
             <button class="01">q</button>
@@ -47,6 +74,6 @@
         
     </div>
     <script src="index.js" type="module"></script>
-    <div class="patch">Patch: 0.0.2</div>
+    <div class="patch">Patch: 0.0.3</div>
 </body>
 </html>

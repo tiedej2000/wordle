@@ -9,22 +9,24 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 44px;
     color: white;
     text-transform: uppercase;
-    position: relative;
-    top: 60px;
+    font-family: "NYTKarnakCondensed"; 
+    margin-top: 40px;
+    border-bottom: 2px solid var(--empty);
+    padding-bottom: 30px;
 }
 
 .patch{
     color: rgba(211, 211, 211, 0.683);
     position: relative;
     top: 5vh;
-    font-size: 1vh;
+    font-size: 1.5vh;
     display: flex;
     justify-content: center;
     position: relative;
-    top: -100px;
+    top: -140px;
 }
 
 :root {
@@ -40,7 +42,7 @@ html, body {
     width: 100%;
     height: 600px;
     position: relative;
-    top: -40px;
+    top: -80px;
 }
 
 .grid {
@@ -84,7 +86,7 @@ html, body {
     align-items: center;
     gap: 8px;
     position: relative;
-    top: -120px;
+    top: -160px;
 }
 
 .keyboard .top-row,
@@ -115,41 +117,57 @@ html, body {
 button.enter {
     width: 70px;
     font-size: 12px;
-    position: relative;
-    top: -3px;
 }
 
 button.del {
     width: 70px;
     font-size: 16px;
-    position: relative;
-    top: -2px;
 }
 
 button:hover {
     background-color: #3a3a3c;
 }
 
-@keyframes reveal {
+@keyframes reveal-wrong {
     0% {
-        background-position: 0% 50%; /* Start with empty color */
+        background-position: 100% 50%; 
+        border-color: var(--wrong);
     }
     100% {
-        background-position: 100% 50%; /* End with wrong color */
+        background-position: 0% 50%; 
+        border-color: var(--wrong);
+    }
+}
+
+@keyframes reveal-right {
+    0% {
+        background-position: 100% 50%; 
+        border-color: var(--right);
+    }
+    100% {
+        background-position: 0% 50%; 
+        border-color: var(--right);
     }
 }
 
 .reveal-wrong {
-    animation: reveal 0.5s ease-in-out forwards;
-    background: linear-gradient(90deg, var(--empty) 50%, var(--wrong) 50%);
-    background-size: 200% 100%; /* This makes the gradient wide enough for the transition */
+    animation: reveal-wrong 0.5s ease-in-out forwards;
+    background: linear-gradient(90deg, var(--wrong) 50%, var(--empty) 50%);
+    background-size: 200% 100%; 
 }
 
-/* Media Query for Small Screens */
+.reveal-right {
+    animation: reveal-right 0.5s ease-in-out forwards;
+    background: linear-gradient(90deg, var(--right) 50%, var(--empty) 50%);
+    background-size: 200% 100%; 
+}
+
+
+
 @media (max-width: 600px) {
     #game {
-        height: 40vh; /* Compact height for smaller screens */
-        margin-top: 2vh;
+        height: 40vh; 
+        margin-top: 5vh;
     }
 
     .box {
@@ -160,19 +178,21 @@ button:hover {
 
     .patch{
         position: relative;
-        top: -20px;
+        top: -40px;
     }
 
     .header{
         margin-top: 80px;
         position: relative;
-        top: -20px;
+        top: -40px;
+        font-size: 4vh;
+
     }
 
     .keyboard {
         width: 100%;
         position: relative;
-        top: -4vh;
+        top: -7.5vh;
     }
 
     .keyboard .top-row,
