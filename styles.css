@@ -166,8 +166,8 @@ button:hover {
 
 @media (max-width: 600px) {
     #game {
-        height: 40vh; 
-        margin-top: 5vh;
+        height: 40vh;
+        margin-top: 10vh;
     }
 
     .box {
@@ -176,17 +176,16 @@ button:hover {
         font-size: 3vh;
     }
 
-    .patch{
+    .patch {
         position: relative;
         top: -40px;
     }
 
-    .header{
+    .header {
         margin-top: 80px;
         position: relative;
         top: -40px;
         font-size: 4vh;
-
     }
 
     .keyboard {
@@ -197,16 +196,16 @@ button:hover {
 
     .keyboard .top-row,
     .keyboard .mid-row {
-        flex-direction: row; 
+        flex-direction: row;
     }
 
     .keyboard button {
         width: 7vw;
         height: 11vw;
         font-size: 2vh;
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-transform: uppercase;
         touch-action: manipulation;
     }
@@ -223,4 +222,5 @@ button:hover {
         background-color: #818384;
     }
 }
+
 
