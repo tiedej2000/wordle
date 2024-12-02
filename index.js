@@ -118,7 +118,8 @@ const revealWord = (guess) => {
         if(letter === state.secret[i]){
             box.classList.add('right')
         } else if(state.secret.includes(letter)){
-            box.classList.add('wrong')
+            box.classList.add('reveal-wrong')
+
         } else {
             box.classList.add('empty')
         }

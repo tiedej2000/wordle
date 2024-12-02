@@ -130,6 +130,21 @@ button:hover {
     background-color: #3a3a3c;
 }
 
+@keyframes reveal {
+    0% {
+        background-position: 0% 50%; /* Start with empty color */
+    }
+    100% {
+        background-position: 100% 50%; /* End with wrong color */
+    }
+}
+
+.reveal-wrong {
+    animation: reveal 0.5s ease-in-out forwards;
+    background: linear-gradient(90deg, var(--empty) 50%, var(--wrong) 50%);
+    background-size: 200% 100%; /* This makes the gradient wide enough for the transition */
+}
+
 /* Media Query for Small Screens */
 @media (max-width: 600px) {
     #game {
@@ -188,3 +203,4 @@ button:hover {
         background-color: #818384;
     }
 }
+
