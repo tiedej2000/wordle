@@ -45,6 +45,22 @@ html, body {
     top: -80px;
 }
 
+.keyboard-green {
+    background-color: #538d4e; /* Correct letter and position */
+    color: white;
+}
+
+.keyboard-yellow {
+    background-color: #b59f3b; /* Correct letter, wrong position */
+    color: white;
+}
+
+.keyboard-gray {
+    background-color: #3a3a3c; /* Incorrect letter */
+    color: white;
+}
+
+
 .grid {
     display: grid;
     grid-template-columns: repeat(5, auto);
